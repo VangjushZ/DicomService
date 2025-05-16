@@ -120,9 +120,6 @@ namespace DicomService.API.Controllers
 
             await using (dicomStream)
             {
-                if (!await _dicomParser.ValidateAsync(dicomStream))
-                    return BadRequest(new ProblemDetails { Title = "Invalid DICOM file" });
-
                 var ds = await _dicomParser.LoadDicomDatasetAsync(dicomStream);
 
                 var totalFrames = _dicomParser.GetNumberOfFrames(ds);
