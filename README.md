@@ -11,7 +11,8 @@ A microservice for uploading DICOM files, querying DICOM header tags, and render
 3. [Run Locally (CLI)](#run-locally-cli)
 4. [API Endpoints](#api-endpoints)
 5. [Quick Testing](#quick-testing)
-6. [Cleaning Up](#cleaning-up)
+6. [Running Unit Tests](#running-unit-tests)
+7. [Cleaning Up](#cleaning-up)
 
 ---
 
@@ -117,6 +118,18 @@ curl "http://localhost:5196/api/dicom/{id}/image?frame=0" --output frame0.png
 
 ---
 
+## Running Unit Tests
+
+Navigate into the test project directory and run the tests:
+
+```bash
+cd DicomService.Tests
+
+dotnet test
+```
+
+---
+
 ## Cleaning Up
 
 * **Stop** the service: `Ctrl+C`
@@ -126,4 +139,3 @@ curl "http://localhost:5196/api/dicom/{id}/image?frame=0" --output frame0.png
   rm DicomService.API/app.db
   rm -rf DicomService.API/dicom-uploads
   ```
-
