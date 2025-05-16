@@ -126,11 +126,4 @@ curl "http://localhost:5196/api/dicom/{id}/image?frame=0" --output frame0.png
   rm DicomService.API/app.db
   rm -rf DicomService.API/dicom-uploads
   ```
-* **Ignore** these in your `.gitignore`:
 
-  ```gitignore
-  DicomService.API/app.db
-  DicomService.API/app.db-shm
-  DicomService.API/app.db-wal
-  DicomService.API/dicom-uploads/
-  ```
