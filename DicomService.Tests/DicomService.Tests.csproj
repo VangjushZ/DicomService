@@ -24,4 +24,8 @@
     <ProjectReference Include="..\DicomService.API\DicomService.API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+	  <None Include="TestData\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
